@@ -14,6 +14,7 @@ app.use('/api/form', formRoutes);
 
 mongoose.connect(process.env.MONGODB_ATLAS_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
+    console.log('MongoDB connected');
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
     });

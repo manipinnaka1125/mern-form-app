@@ -6,4 +6,4 @@ const FormDataSchema = new mongoose.Schema({
   email: { type: String, required: true },
 });
 
-module.exports = mongoose.model('FormData', FormDataSchema);
+module.exports = mongoose.models.FormData || mongoose.model('FormData', FormDataSchema);
