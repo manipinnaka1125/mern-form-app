@@ -1,4 +1,4 @@
-// frontend/src/App.js
+
 import React, { useState, useEffect } from 'react';
 import Form from './components/Form';
 import Table from './components/Table';
