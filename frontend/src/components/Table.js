@@ -1,5 +1,6 @@
 // frontend/src/components/Table.js
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Table = ({ data }) => {
   return (
@@ -20,6 +21,15 @@ const Table = ({ data }) => {
       </tbody>
     </table>
   );
+};
+
+Table.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default Table;
